@@ -17,15 +17,13 @@ Yapay zeka destekli duygu analizi ve hibrit puanlama yaklaşımıyla ürün yoru
 - **Hızlı Arama**
 - **REST API**
 
-## 🖼️ Projeden Görüntüler
+<img width="1915" height="898" alt="image" src="https://github.com/user-attachments/assets/7e9b559b-de04-44af-8a7c-0c781fbf4e87" />
 
-  <img width="1872" height="770" alt="image" src="https://github.com/user-attachments/assets/6b297c87-866c-49f6-8f96-1daeee937790" />
-  
-  <img width="1905" height="892" alt="image" src="https://github.com/user-attachments/assets/65a02755-97be-4484-b2f8-113854ea0931" />
+<img width="1887" height="897" alt="image" src="https://github.com/user-attachments/assets/ff56bb8f-23b5-4aad-843d-4b17e9976150" />
 
-  <img width="1902" height="866" alt="image" src="https://github.com/user-attachments/assets/7d99cf8c-f20f-488c-bf37-2a33aa0bd047" />
+<img width="1907" height="857" alt="image" src="https://github.com/user-attachments/assets/25a0e5eb-2b04-4d6c-bace-278866109f92" />
 
-  <img width="1897" height="837" alt="image" src="https://github.com/user-attachments/assets/27855c33-a122-437a-8d53-326460d51b91" />
+<img width="1868" height="855" alt="image" src="https://github.com/user-attachments/assets/ab235b27-0384-4ede-86c5-328ba0d4541c" />
 
 
 
