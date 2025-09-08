@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Ticaret Zekası</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="bg-shape shape-1"></div>
+        <div class="bg-shape shape-2"></div>
+        <div class="bg-shape shape-3"></div>
+        <div class="bg-shape shape-4"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>AI Ticaret</h1>
+                    <span class="brand-subtitle">Zekası</span>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="#products" class="nav-link">
+                    <i class="fas fa-cube"></i>
+                    <span>Ürünler</span>
+                </a>
+                <a href="#analytics" class="nav-link">
+                    <i class="fas fa-chart-network"></i>
+                    <span>Analitik</span>
+                </a>
+                <a href="#insights" class="nav-link">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>İçgörüler</span>
+                </a>
+                <button class="theme-toggle glass-btn" onclick="toggleTheme()" title="Tema Değiştir">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="fas fa-sparkles"></i>
+                        <span>AI Destekli Analitik</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Akıllı</span><br>
+                        Yorum Analizi
+                    </h1>
+                    <p class="hero-description">
+                        Gelişmiş AI destekli duygu analizi ve hibrit puanlama sistemimizle müşteri geri bildirimlerini eyleme dönüştürülebilir içgörülere dönüştürün.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-large" onclick="scrollToProducts()">
+                            <i class="fas fa-rocket"></i>
+                            <span>Ürünleri Keşfet</span>
+                        </button>
+                        <button class="btn btn-secondary btn-large" onclick="openProductModal()">
+                            <i class="fas fa-plus"></i>
+                            <span>Ürün Ekle</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="ai-dashboard">
+                        <div class="dashboard-header">
+                            <div class="ai-indicator">
+                                <div class="pulse-dot"></div>
+                                <span>AI Analizi Aktif</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="metric-data">
+                                    <div class="metric-value">87%</div>
+                                    <div class="metric-label">Pozitif</div>
+                                </div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-balance-scale"></i>
+                                </div>
+                                <div class="metric-data">
+                                    <div class="metric-value">8%</div>
+                                    <div class="metric-label">Nötr</div>
+                                </div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="metric-data">
+                                    <div class="metric-value">5%</div>
+                                    <div class="metric-label">Negatif</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="header-content">
+                    <div class="section-badge">
+                        <i class="fas fa-cube"></i>
+                        <span>Ürün Kataloğu</span>
+                    </div>
+                    <h2 class="section-title">AI Analizli Ürünler</h2>
+                    <p class="section-subtitle">Akıllı duygu analizi ve hibrit puanlama ile ürünleri keşfedin</p>
+                </div>
+                <div class="header-actions">
+                    <div class="search-container">
+                        <div class="search-box glass-input">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="searchInput" placeholder="Ürün ara..." onkeyup="performSearch()">
+                            <button class="search-clear" onclick="clearSearch()" style="display: none;">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary glass-btn" onclick="openProductModal()">
+                            <i class="fas fa-plus"></i>
+                            <span>Ürün Ekle</span>
+                        </button>
+                        <button class="btn btn-secondary glass-btn" onclick="openBulkReviewModal()">
+                            <i class="fas fa-upload"></i>
+                            <span>Toplu İçe Aktar</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="modal glass-modal">
+        <div class="modal-content glass-card">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i class="fas fa-comment-dots"></i>
+                    <h3>Yorum Ekle</h3>
+                </div>
+                <button class="modal-close glass-btn" onclick="closeModal('reviewModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="reviewForm" class="modal-form">
+                <div class="form-group">
+                    <label class="form-label">Puanlama</label>
+                    <div class="star-rating-container">
+                        <div class="star-rating">
+                            <input type="radio" id="star1" name="starRating" value="1">
+                            <label for="star1"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star2" name="starRating" value="2">
+                            <label for="star2"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star3" name="starRating" value="3">
+                            <label for="star3"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star4" name="starRating" value="4">
+                            <label for="star4"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star5" name="starRating" value="5">
+                            <label for="star5"><i class="fas fa-star"></i></label>
+                        </div>
+                        <div class="rating-text">Puanınızı seçin</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="comment" class="form-label">Yorum</label>
+                    <div class="textarea-container">
+                        <textarea id="comment" name="comment" rows="4" placeholder="Bu ürün hakkındaki düşüncelerinizi paylaşın..." required></textarea>
+                        <div class="textarea-counter">
+                            <span id="charCount">0</span>/500
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-outline glass-btn" onclick="closeModal('reviewModal')">İptal</button>
+                    <button type="submit" class="btn btn-primary glass-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Yorumu Gönder</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="modal glass-modal">
+        <div class="modal-content large glass-card">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i class="fas fa-info-circle"></i>
+                    <h3>Ürün Detayları</h3>
+                </div>
+                <button class="modal-close glass-btn" onclick="closeModal('productModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="productDetail" class="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Add Product Modal -->
+    <div id="addProductModal" class="modal glass-modal">
+        <div class="modal-content glass-card">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i class="fas fa-plus-circle"></i>
+                    <h3>Yeni Ürün Ekle</h3>
+                </div>
+                <button class="modal-close glass-btn" onclick="closeModal('addProductModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="addProductForm" class="modal-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productName" class="form-label">Ürün Adı</label>
+                        <input type="text" id="productName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productCategory" class="form-label">Kategori</label>
+                        <select id="productCategory" name="category" required>
+                            <option value="">Kategori Seçin</option>
+                            <option value="Electronics">Elektronik</option>
+                            <option value="Fashion">Moda</option>
+                            <option value="Home & Living">Ev & Yaşam</option>
+                            <option value="Sports">Spor</option>
+                            <option value="Books">Kitap</option>
+                            <option value="Beauty">Güzellik</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="productDescription" class="form-label">Açıklama</label>
+                    <textarea id="productDescription" name="description" rows="3" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productPrice" class="form-label">Fiyat</label>
+                        <div class="price-input">
+                            <input type="number" id="productPrice" name="price" step="0.01" placeholder="0.00" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="productImageUrl" class="form-label">Resim URL</label>
+                        <input type="url" id="productImageUrl" name="imageUrl" placeholder="https://example.com/image.jpg">
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-outline glass-btn" onclick="closeModal('addProductModal')">İptal</button>
+                    <button type="submit" class="btn btn-primary glass-btn">
+                        <i class="fas fa-plus"></i>
+                        <span>Ürün Ekle</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bulk Review Modal -->
+    <div id="bulkReviewModal" class="modal glass-modal">
+        <div class="modal-content large glass-card">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i class="fas fa-upload"></i>
+                    <h3>Toplu Yorum İçe Aktar</h3>
+                </div>
+                <button class="modal-close glass-btn" onclick="closeModal('bulkReviewModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="bulkReviewForm" class="modal-form">
+                <div class="form-group">
+                    <label for="bulkProductId" class="form-label">Ürün</label>
+                    <select id="bulkProductId" name="productId" required>
+                        <option value="">Ürün Seçin</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bulkReviews" class="form-label">Yorumlar (JSON format)</label>
+                    <div class="textarea-container">
+                        <textarea id="bulkReviews" name="reviews" rows="10" placeholder='[
+  {
+    "comment": "Amazing product, very satisfied!",
+    "starRating": 5
+  },
+  {
+    "comment": "Fast shipping, good quality.",
+    "starRating": 4
+  }
+]' required></textarea>
+                        <div class="textarea-help">
+                            <i class="fas fa-info-circle"></i>
+                            Enter reviews in JSON format
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-outline glass-btn" onclick="closeModal('bulkReviewModal')">İptal</button>
+                    <button type="submit" class="btn btn-primary glass-btn">
+                        <i class="fas fa-upload"></i>
+                        <span>Yorumları İçe Aktar</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Reviews Modal -->
+    <div id="reviewsModal" class="modal glass-modal">
+        <div class="modal-content large glass-card">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i class="fas fa-comments"></i>
+                    <h3>Ürün Yorumları</h3>
+                </div>
+                <button class="modal-close glass-btn" onclick="closeModal('reviewsModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="reviewsModalContent" class="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Category Reviews Modal -->
+    <div id="categoryReviewsModal" class="modal glass-modal">
+        <div class="modal-content large glass-card">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i class="fas fa-tags"></i>
+                    <h3>Kategori Yorumları</h3>
+                </div>
+                <button class="modal-close glass-btn" onclick="closeModal('categoryReviewsModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="categoryReviewsModalContent" class="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-main">
+                    <div class="footer-brand">
+                        <div class="footer-brand-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="footer-brand-text">
+                            <h3>AI Ticaret Zekası</h3>
+                            <p>Gelişmiş AI teknolojisi ile müşteri geri bildirimlerini eyleme dönüştürülebilir içgörülere dönüştürün</p>
+                        </div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" class="social-link glass-btn">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link glass-btn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link glass-btn">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Özellikler</h4>
+                    <ul>
+                        <li><i class="fas fa-robot"></i> AI Duygu Analizi</li>
+                        <li><i class="fas fa-chart-network"></i> Hibrit Puanlama</li>
+                        <li><i class="fas fa-bolt"></i> Gerçek Zamanlı Analitik</li>
+                        <li><i class="fas fa-search"></i> Akıllı Arama</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kategoriler</h4>
+                    <ul>
+                        <li><i class="fas fa-star"></i> Kalite & Dayanıklılık</li>
+                        <li><i class="fas fa-cogs"></i> Kullanım & Performans</li>
+                        <li><i class="fas fa-shipping-fast"></i> Hizmet & Teslimat</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@aiticaret.com</li>
+                        <li><i class="fas fa-phone"></i> +90 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</li>
+                        <li><i class="fas fa-clock"></i> 7/24 Destek</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 AI Ticaret Zekası. Tüm hakları saklıdır.</p>
+                    <div class="footer-links">
+                        <a href="#">Gizlilik Politikası</a>
+                        <a href="#">Hizmet Şartları</a>
+                        <a href="#">Çerez Politikası</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "categories": {
+    "quality_durability": {
+      "name": "Kalite & Dayanıklılık",
+      "description": "Ürünün malzeme kalitesi, işçilik düzeyi ve uzun ömürlü kullanım özellikleri",
+      "keywords": [
+        "kalite", "malzeme", "materyal", "kumaş", "plastik", "metal", "ahşap", "cam",
+        "sağlam", "dayanıklı", "kırılgan", "esnek", "sert", "yumuşak",
+        "bozuk", "kırık", "çizik", "kusur", "defolu", "hatalı", "eksik",
+        "uzun ömürlü", "dayanıklılık", "sağlamlık", "güvenilirlik",
+        "işçilik", "üretim", "montaj", "birleştirme", "dikiş", "kaynak",
+        "düzgün", "düzensiz", "profesyonel", "amatör", "titiz",
+        "taze", "bayat", "bozulmuş", "küflü", "çürük", "yenilebilir"
+      ]
+    },
+    "usage_performance": {
+      "name": "Kullanım & Performans",
+      "description": "Ürünün işlevselliği, kullanım kolaylığı ve vaat edilen performansı",
+      "keywords": [
+        "performans", "işlev", "fonksiyon", "çalışma", "çalışıyor", "çalışmıyor",
+        "hız", "yavaş", "hızlı", "verimli", "verimsiz", "etkili", "etkisiz",
+        "yeterli", "yetersiz", "kapasite", "limit",
+        "kolay", "zor", "basit", "karmaşık", "anlaşılır", "karışık", "pratik", "kullanışlı",
+        "rahat", "rahatsız", "konforlu", "konforsuz", "ergonomik", "uygun", "uygunsuz",
+        "mükemmel", "harika", "süper", "berbat", "kötü", "iyi", "fena değil", "idare eder",
+        "beklenti", "beklediğim", "hayal kırıklığı",
+        "arıza", "hata", "eksiklik"
+      ]
+    },
+    "service_delivery": {
+      "name": "Hizmet & Teslimat",
+      "description": "Kargo süreci, paketleme kalitesi, iade ve müşteri hizmetleri deneyimi",
+      "keywords": [
+        "kargo", "teslimat", "gönderi", "ulaştı", "ulaşmadı", "geldi", "gelmedi",
+        "paket", "kutu", "ambalaj", "sarmalama", "paketleme", "açılış",
+        "hızlı", "yavaş", "gecikti", "gecikme", "zamanında", "geç", "erken",
+        "müşteri hizmetleri", "destek", "yardım", "iletişim", "telefon", "email", "mesaj",
+        "cevap", "yanıt", "dönüş", "ilgi", "umursamaz", "ilgisiz",
+        "iade", "değişim", "geri gönderme", "para iadesi", "tazminat",
+        "deneyim", "memnuniyet", "tavsiye", "tavsiye etmem"
+      ]
+    }
+  }
+}
